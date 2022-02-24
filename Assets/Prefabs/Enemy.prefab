@@ -208,6 +208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  Distance: 0
+  Distance: 20
   isAngered: 1
   _agent: {fileID: 5628501180247378181}
+  player:
+    serializedVersion: 2
+    m_Bits: 512
