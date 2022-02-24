@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMotor : MonoBehaviour
-{
+{    
+    // define variables
     private Vector3 velocity = Vector3.zero;
     private Vector3 rotation = Vector3.zero;
     private float cameraRotationX = 0f;
@@ -16,7 +17,7 @@ public class PlayerMotor : MonoBehaviour
     [SerializeField]
     private float cameraRotationLimit = 85f;
 
-    // Start is called before the first frame update
+    // start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,7 +41,7 @@ public class PlayerMotor : MonoBehaviour
         cameraRotationX = _cameraRotationX;
     }
 
-    // Executes the movement based off the pre defined velocity vector
+    // executes the movement based off the pre defined velocity vector
     // rb.MovePosition function takes into account the location of the rigid body when moving
     // this helps to perfrom physics checks such as collisions during movement
     void PerformMovement()
@@ -70,4 +71,3 @@ public class PlayerMotor : MonoBehaviour
         Cursor.visible = false;
     }
 }
-// caleb big stinky

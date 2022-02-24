@@ -12,9 +12,12 @@ public class playerHealth : MonoBehaviour
 
     void Update()
     {
+        // displays current hp by calling the int directly
         healthText.text = $"HP: {playerHP}";
     }
 
+    // this method detects damage from collisions with enemies
+    // it also hits a loose condition when health reaches 0
     void OnCollisionEnter(Collision collision) 
     {
         if(collision.gameObject.CompareTag("Enemy"))
